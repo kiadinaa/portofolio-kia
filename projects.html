@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Putu Kiara Dina Wardani, mahasiswa Ilmu Komputer.">
+    <title>Portofolio | Kia♡</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-800">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-pink-100">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 py-4">
+
+            <div class="flex items-center justify-between">
+
+                <a href="index.html" class="text-3xl font-display italic font-bold text-pink-500">
+                    Kia<span class="text-slate-800">♡</span>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-7 text-sm font-medium">
+
+                    <a href="index.html" class="hover:text-pink-500 transition">
+                        Beranda
+                    </a>
+
+                    <a href="about.html" class="hover:text-pink-500 transition">
+                        Tentang Saya
+                    </a>
+
+                    <a href="projects.html" class="text-pink-500 border-b-2 border-pink-400 pb-1">
+                        Portofolio
+                    </a>
+
+                    <a href="experience.html" class="hover:text-pink-500 transition">
+                        Pengalaman
+                    </a>
+
+                    <a href="javascript.html" class="hover:text-pink-500 transition">
+                        Cek Nilai Mahasiswa
+                    </a>
+
+                    <a href="contact.html"
+                       class="rounded-full bg-pink-500 text-white px-5 py-2.5 hover:bg-pink-600 transition shadow-md shadow-pink-200">
+                        Kontak
+                    </a>
+
+                </div>
+
+                <button id="menuButton"
+                        class="lg:hidden text-2xl text-pink-500"
+                        aria-label="Buka menu">
+                    ☰
+                </button>
+
+            </div>
+
+            <div id="mobileMenu" class="hidden lg:hidden pt-5 pb-2">
+
+                <div class="flex flex-col gap-4 text-sm font-medium">
+
+                    <a href="index.html" class="hover:text-pink-500 transition">
+                        Beranda
+                    </a>
+
+                    <a href="about.html" class="hover:text-pink-500 transition">
+                        Tentang Saya
+                    </a>
+
+                    <a href="projects.html" class="text-pink-500">
+                        Portofolio
+                    </a>
+
+                    <a href="experience.html" class="hover:text-pink-500 transition">
+                        Pengalaman
+                    </a>
+
+                    <a href="javascript.html" class="hover:text-pink-500 transition">
+                        Cek Nilai Mahasiswa
+                    </a>
+
+                    <a href="contact.html" class="text-pink-500">
+                        Kontak →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <main class="pt-24">
+
+        <section class="relative overflow-hidden bg-gradient-to-br from-pink-50 via-white to-rose-50">
+
+            <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-20">
+
+                <div class="max-w-3xl">
+
+                    <p class="text-pink-500 font-semibold text-sm tracking-widest uppercase">
+                        Portofolio
+                    </p>
+
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 mt-3 leading-tight">
+                        Karya dan
+                        <span class="text-pink-500 italic">Project Saya</span>
+                        ♡
+                    </h1>
+
+                    <p class="text-slate-500 leading-relaxed mt-5 max-w-2xl">
+                        Berikut adalah beberapa project yang saya kerjakan selama
+                        proses perkuliahan. Setiap project menjadi bagian dari
+                        perjalanan saya dalam belajar dan mengembangkan kemampuan
+                        di bidang teknologi.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="py-16 lg:py-20 bg-white">
+
+            <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+                <div class="flex flex-wrap gap-3 mb-10">
+
+                    <button class="filter-btn bg-pink-500 text-white px-5 py-2.5 rounded-full text-sm font-medium"
+                            data-filter="semua">
+                        Semua
+                    </button>
+
+                    <button class="filter-btn bg-pink-50 text-pink-500 px-5 py-2.5 rounded-full text-sm font-medium hover:bg-pink-100 transition"
+                            data-filter="web">
+                        Web Development
+                    </button>
+
+                    <button class="filter-btn bg-pink-50 text-pink-500 px-5 py-2.5 rounded-full text-sm font-medium hover:bg-pink-100 transition"
+                            data-filter="algoritma">
+                        Algoritma
+                    </button>
+
+                    <button class="filter-btn bg-pink-50 text-pink-500 px-5 py-2.5 rounded-full text-sm font-medium hover:bg-pink-100 transition"
+                            data-filter="rpl">
+                        Sistem Informasi
+                    </button>
+
+                </div>
+
+                <div id="projectContainer"
+                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+                    <article class="project-card group bg-white rounded-3xl overflow-hidden border border-pink-100 shadow-sm hover:-translate-y-2 hover:shadow-xl hover:shadow-pink-100 transition duration-300"
+                             data-category="web">
+
+                        <div class="h-48 bg-pink-100 overflow-hidden relative">
+
+                            <img src="assets/portfolio.jpg"
+                                 alt="Website Portofolio Pribadi"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                            <span class="absolute top-4 left-4 bg-white/90 text-pink-500 text-xs font-semibold px-3 py-1.5 rounded-full">
+                                Web Development
+                            </span>
+
+                        </div>
+
+                        <div class="p-6">
+
+                            <p class="text-xs text-pink-500 font-semibold uppercase tracking-wide">
+                                Pemrograman Web Dasar
+                            </p>
+
+                            <h2 class="text-xl font-bold mt-2 group-hover:text-pink-500 transition">
+                                Website Portofolio Pribadi
+                            </h2>
+
+                            <p class="text-slate-500 text-sm leading-relaxed mt-3">
+                                Perancangan website portfolio pribadi yang
+                                responsive menggunakan HTML dan Tailwind CSS,
+                                dilengkapi dengan fitur JavaScript.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-5">
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    HTML
+                                </span>
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    Tailwind CSS
+                                </span>
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    JavaScript
+                                </span>
+
+                            </div>
+
+                            <div class="mt-6 pt-5 border-t border-pink-100">
+                                <span class="text-pink-500 font-semibold text-sm">
+                                    Project Perkuliahan →
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="project-card group bg-white rounded-3xl overflow-hidden border border-pink-100 shadow-sm hover:-translate-y-2 hover:shadow-xl hover:shadow-pink-100 transition duration-300"
+                             data-category="rpl">
+
+                        <div class="h-48 bg-pink-100 overflow-hidden relative">
+
+                            <img src="assets/klinik.jpg"
+                                 alt="Sistem Informasi Manajemen Klinik"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                            <span class="absolute top-4 left-4 bg-white/90 text-pink-500 text-xs font-semibold px-3 py-1.5 rounded-full">
+                                Sistem Informasi
+                            </span>
+
+                        </div>
+
+                        <div class="p-6">
+
+                            <p class="text-xs text-pink-500 font-semibold uppercase tracking-wide">
+                                Rekayasa Perangkat Lunak
+                            </p>
+
+                            <h2 class="text-xl font-bold mt-2 group-hover:text-pink-500 transition">
+                                Sistem Informasi Manajemen Klinik
+                            </h2>
+
+                            <p class="text-slate-500 text-sm leading-relaxed mt-3">
+                                Perancangan sistem informasi manajemen antrian
+                                dan reservasi klinik kecantikan yang terintegrasi
+                                dengan penjadwalan terapis.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-5">
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    UML
+                                </span>
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    Figma
+                                </span>
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    Database
+                                </span>
+
+                            </div>
+
+                            <div class="mt-6 pt-5 border-t border-pink-100">
+                                <span class="text-pink-500 font-semibold text-sm">
+                                    Project Perkuliahan →
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="project-card group bg-white rounded-3xl overflow-hidden border border-pink-100 shadow-sm hover:-translate-y-2 hover:shadow-xl hover:shadow-pink-100 transition duration-300"
+                             data-category="algoritma">
+
+                        <div class="h-48 bg-pink-100 overflow-hidden relative">
+
+                            <img src="assets/sorting.jpg"
+                                 alt="Analisis Merge Sort dan Quick Sort"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                            <span class="absolute top-4 left-4 bg-white/90 text-pink-500 text-xs font-semibold px-3 py-1.5 rounded-full">
+                                Algoritma
+                            </span>
+
+                        </div>
+
+                        <div class="p-6">
+
+                            <p class="text-xs text-pink-500 font-semibold uppercase tracking-wide">
+                                Analisis dan Desain Algoritma
+                            </p>
+
+                            <h2 class="text-xl font-bold mt-2 group-hover:text-pink-500 transition">
+                                Analisis Merge Sort & Quick Sort
+                            </h2>
+
+                            <p class="text-slate-500 text-sm leading-relaxed mt-3">
+                                Analisis komparatif algoritma Merge Sort dan
+                                Quick Sort terhadap efisiensi pengurutan data
+                                berdasarkan kompleksitas dan hasil pengujian.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-5">
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    Sorting
+                                </span>
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    Algoritma
+                                </span>
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    Analisis
+                                </span>
+
+                            </div>
+
+                            <div class="mt-6 pt-5 border-t border-pink-100">
+                                <span class="text-pink-500 font-semibold text-sm">
+                                    Tugas Perkuliahan →
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="project-card group bg-white rounded-3xl overflow-hidden border border-pink-100 shadow-sm hover:-translate-y-2 hover:shadow-xl hover:shadow-pink-100 transition duration-300"
+                             data-category="rpl">
+
+                        <div class="h-48 bg-pink-100 overflow-hidden relative">
+
+                            <img src="assets/washgo.jpg"
+                                 alt="Desain UI UX Aplikasi WashGo"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                            <span class="absolute top-4 left-4 bg-white/90 text-pink-500 text-xs font-semibold px-3 py-1.5 rounded-full">
+                                UI/UX Design
+                            </span>
+
+                        </div>
+
+                        <div class="p-6">
+
+                            <p class="text-xs text-pink-500 font-semibold uppercase tracking-wide">
+                                Desain Antarmuka dan Pengalaman Pengguna
+                            </p>
+
+                            <h2 class="text-xl font-bold mt-2 group-hover:text-pink-500 transition">
+                                Desain UI/UX Aplikasi WashGo
+                            </h2>
+
+                            <p class="text-slate-500 text-sm leading-relaxed mt-3">
+                                Perancangan antarmuka dan pengalaman pengguna
+                                aplikasi WashGo dengan memperhatikan kebutuhan
+                                pengguna, alur penggunaan, serta tampilan yang
+                                sederhana dan mudah digunakan.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-5">
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    UI/UX
+                                </span>
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    Figma
+                                </span>
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    User Flow
+                                </span>
+
+                            </div>
+
+                            <div class="mt-6 pt-5 border-t border-pink-100">
+                                <span class="text-pink-500 font-semibold text-sm">
+                                    Project Perkuliahan →
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="project-card group bg-white rounded-3xl overflow-hidden border border-pink-100 shadow-sm hover:-translate-y-2 hover:shadow-xl hover:shadow-pink-100 transition duration-300"
+                             data-category="web">
+
+                        <div class="h-48 bg-pink-100 overflow-hidden relative">
+
+                            <img src="assets/cek-nilai.jpg"
+                                 alt="Cek Nilai Mahasiswa"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+
+                            <span class="absolute top-4 left-4 bg-white/90 text-pink-500 text-xs font-semibold px-3 py-1.5 rounded-full">
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                        <div class="p-6">
+
+                            <p class="text-xs text-pink-500 font-semibold uppercase tracking-wide">
+                                Pemrograman Web Dasar
+                            </p>
+
+                            <h2 class="text-xl font-bold mt-2 group-hover:text-pink-500 transition">
+                                Cek Nilai Mahasiswa
+                            </h2>
+
+                            <p class="text-slate-500 text-sm leading-relaxed mt-3">
+                                Fitur perhitungan nilai mahasiswa menggunakan
+                                JavaScript dengan input nilai Tugas, Sikap,
+                                Kehadiran, UTS, dan UAS serta penentuan
+                                predikat nilai.
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mt-5">
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    JavaScript
+                                </span>
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    DOM
+                                </span>
+
+                                <span class="text-xs bg-pink-50 text-pink-600 px-3 py-1.5 rounded-full">
+                                    Form
+                                </span>
+
+                            </div>
+
+                            <div class="mt-6 pt-5 border-t border-pink-100">
+
+                                <a href="javascript.html"
+                                   class="text-pink-500 font-semibold text-sm hover:text-pink-600">
+                                    Coba fitur →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <div id="emptyMessage"
+                     class="hidden text-center py-16">
+
+                    <div class="text-5xl mb-4">
+                        ♡
+                    </div>
+
+                    <p class="text-slate-500">
+                        Belum ada project pada kategori ini.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="py-16 bg-pink-50">
+
+            <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+
+                <div class="text-4xl text-pink-400">
+                    ✦ ♡ ✦
+                </div>
+
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-800 mt-5">
+                    Masih Banyak yang Ingin Saya Pelajari
+                </h2>
+
+                <p class="text-slate-500 leading-relaxed mt-4">
+                    Setiap project memberikan pengalaman baru dan menjadi
+                    bagian dari proses saya untuk terus belajar, mencoba,
+                    dan berkembang di bidang teknologi.
+                </p>
+
+                <a href="contact.html"
+                   class="inline-flex items-center gap-2 bg-pink-500 text-white px-6 py-3 rounded-full font-medium mt-7 hover:bg-pink-600 hover:-translate-y-1 transition shadow-lg shadow-pink-200">
+                    Mari Terhubung
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-white">
+
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 py-8">
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+
+                <div>
+
+                    <p class="font-display text-2xl italic font-bold">
+                        Kia<span class="text-pink-400">♡</span>
+                    </p>
+
+                    <p class="text-slate-400 text-sm mt-1">
+                        Portfolio Mahasiswa Ilmu Komputer
+                    </p>
+
+                </div>
+
+                <p class="text-slate-500 text-sm">
+                    © 2026 Putu Kiara Dina Wardani
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById("menuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuButton.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const projectCards = document.querySelectorAll(".project-card");
+        const emptyMessage = document.getElementById("emptyMessage");
+
+        filterButtons.forEach(function (button) {
+
+            button.addEventListener("click", function () {
+
+                const filter = button.getAttribute("data-filter");
+
+                filterButtons.forEach(function (btn) {
+                    btn.classList.remove("bg-pink-500", "text-white");
+                    btn.classList.add("bg-pink-50", "text-pink-500");
+                });
+
+                button.classList.remove("bg-pink-50", "text-pink-500");
+                button.classList.add("bg-pink-500", "text-white");
+
+                let visibleProjects = 0;
+
+                projectCards.forEach(function (card) {
+
+                    const category = card.getAttribute("data-category");
+
+                    if (filter === "semua" || category === filter) {
+                        card.classList.remove("hidden");
+                        visibleProjects++;
+                    } else {
+                        card.classList.add("hidden");
+                    }
+
+                });
+
+                if (visibleProjects === 0) {
+                    emptyMessage.classList.remove("hidden");
+                } else {
+                    emptyMessage.classList.add("hidden");
+                }
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>

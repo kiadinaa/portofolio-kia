@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Putu Kiara Dina Wardani, mahasiswa Ilmu Komputer.">
+    <title>Kiara♡ | Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-800">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-pink-100">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 py-4">
+            <div class="flex items-center justify-between">
+
+                <a href="index.html" class="text-3xl font-display italic font-bold text-pink-500">
+                    Kia<span class="text-slate-800"></span>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-7 text-sm font-medium">
+                    <a href="index.html" class="text-pink-500 border-b-2 border-pink-400 pb-1">
+                        Beranda
+                    </a>
+
+                    <a href="about.html" class="hover:text-pink-500 transition">
+                        Tentang Saya
+                    </a>
+
+                    <a href="projects.html" class="hover:text-pink-500 transition">
+                        Portofolio
+                    </a>
+
+                    <a href="experience.html" class="hover:text-pink-500 transition">
+                        Pengalaman
+                    </a>
+
+                    <a href="javascript.html" class="hover:text-pink-500 transition">
+                        Cek Nilai Mahasiswa
+                    </a>
+
+                    <a href="contact.html"
+                       class="rounded-full bg-pink-500 text-white px-5 py-2.5 hover:bg-pink-600 transition shadow-md shadow-pink-200">
+                        Kontak
+                    </a>
+                </div>
+
+                <button id="menuButton"
+                        class="lg:hidden text-2xl text-pink-500"
+                        aria-label="Buka menu">
+                    ☰
+                </button>
+            </div>
+
+            <div id="mobileMenu" class="hidden lg:hidden pt-5 pb-2">
+                <div class="flex flex-col gap-4 text-sm font-medium">
+
+                    <a href="index.html" class="text-pink-500">
+                        Beranda
+                    </a>
+
+                    <a href="about.html" class="hover:text-pink-500 transition">
+                        Tentang Saya
+                    </a>
+
+                    <a href="projects.html" class="hover:text-pink-500 transition">
+                        Portofolio
+                    </a>
+
+                    <a href="experience.html" class="hover:text-pink-500 transition">
+                        Pengalaman
+                    </a>
+
+                    <a href="javascript.html" class="hover:text-pink-500 transition">
+                        Cek Nilai Mahasiswa
+                    </a>
+
+                    <a href="contact.html" class="text-pink-500">
+                        Kontak →
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24">
+
+        <section class="relative overflow-hidden bg-gradient-to-br from-pink-50 via-white to-rose-50">
+            <div class="absolute top-20 left-10 w-32 h-32 bg-pink-200/30 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-48 h-48 bg-rose-200/30 rounded-full blur-3xl"></div>
+
+            <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 lg:py-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                    <div class="relative z-10">
+
+                        <div class="inline-flex items-center gap-2 bg-white border border-pink-100 rounded-full px-4 py-2 text-sm text-pink-500 font-medium shadow-sm mb-6">
+                            <span>Halo Semua</span>
+                            <span>👋</span>
+                        </div>
+
+                        <p class="text-pink-500 font-semibold mb-2">
+                            saya
+                        </p>
+
+                        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight">
+                            Putu Kiara
+                            <span class="text-pink-500 italic">Dina Wardani</span>
+                        </h1>
+
+                        <h2 class="text-xl sm:text-2xl font-semibold text-pink-500 mt-5">
+                            Mahasiswa Ilmu Komputer
+                        </h2>
+
+                        <p class="text-slate-500 leading-relaxed mt-6 max-w-xl">
+                            Saya tertarik pada teknologi, desain, dan hal-hal kreatif.
+                            Melalui portfolio ini, saya ingin berbagi perjalanan,
+                            karya, pengalaman, dan proses belajar saya di dunia teknologi.
+                        </p>
+
+                        <div class="flex flex-wrap gap-4 mt-8">
+                            <a href="about.html"
+                               class="inline-flex items-center gap-2 bg-pink-500 text-white px-6 py-3 rounded-full font-medium hover:bg-pink-600 hover:-translate-y-1 transition shadow-lg shadow-pink-200">
+                                Tentang Saya
+                                <span>→</span>
+                            </a>
+
+                            <a href="projects.html"
+                               class="inline-flex items-center gap-2 bg-white text-pink-500 border border-pink-200 px-6 py-3 rounded-full font-medium hover:bg-pink-50 hover:-translate-y-1 transition">
+                                Lihat Portofolio
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="relative flex justify-center lg:justify-end">
+
+                        <div class="absolute w-72 h-72 sm:w-96 sm:h-96 bg-pink-200 rounded-full opacity-50"></div>
+
+                        <div class="absolute -top-5 right-10 text-pink-400 text-4xl">
+                            ♡
+                        </div>
+
+                        <div class="absolute top-10 left-5 text-pink-400 text-3xl">
+                            ✦
+                        </div>
+
+                        <div class="absolute bottom-10 right-0 text-pink-400 text-3xl">
+                            ✧
+                        </div>
+
+                        <div class="relative">
+
+                            <div class="absolute -top-6 -left-6 text-4xl text-pink-400">
+                                ♔
+                            </div>
+
+                            <img src="assets/profile.jpg"
+                                 alt="Foto Putu Kiara Dina Wardani"
+                                 class="relative w-72 h-80 sm:w-80 sm:h-96 object-cover object-top rounded-[5rem] border-8 border-white shadow-2xl">
+
+                            <div class="absolute -bottom-5 -left-8 bg-white rounded-2xl px-5 py-3 shadow-xl border border-pink-100">
+                                <p class="text-xs text-pink-400 font-medium">
+                                    Better Version
+                                </p>
+                                <p class="text-sm font-bold text-slate-700">
+                                    of Me 
+                                </p>
+                            </div>
+
+                            <div class="absolute -right-8 top-1/2 bg-white/90 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg border border-pink-100 rotate-3">
+                                <p class="text-sm text-pink-500 italic">
+                                    Small steps,
+                                </p>
+                                <p class="text-sm text-pink-500 italic">
+                                    big progress ✦
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 lg:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                    <div>
+                        <p class="text-pink-500 font-semibold text-sm tracking-widest uppercase">
+                            Tentang Saya
+                        </p>
+
+                        <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-800 mt-3">
+                            Mengenal Saya Lebih Dekat
+                            <span class="text-pink-500"></span>
+                        </h2>
+
+                        <p class="text-slate-500 leading-relaxed mt-6">
+                            Saya adalah mahasiswa S1 Ilmu Komputer di Universitas
+                            Pendidikan Ganesha. Saya memiliki ketertarikan terhadap
+                            pengembangan website, teknologi digital, serta berbagai
+                            hal yang berkaitan dengan kreativitas.
+                        </p>
+
+                        <p class="text-slate-500 leading-relaxed mt-4">
+                            Selain belajar di bidang teknologi, saya juga senang
+                            mengembangkan kemampuan komunikasi dan bekerja sama melalui
+                            berbagai kegiatan organisasi, kepanitiaan, MC, moderator,
+                            dan content creation.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-7">
+
+                            <div class="flex items-center gap-3 bg-pink-50 rounded-2xl px-4 py-3">
+                                <span class="text-pink-500 text-xl">⌘</span>
+                                <span class="text-sm font-medium">Web Development</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 bg-pink-50 rounded-2xl px-4 py-3">
+                                <span class="text-pink-500 text-xl">✦</span>
+                                <span class="text-sm font-medium">Desain UI/UX</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 bg-pink-50 rounded-2xl px-4 py-3">
+                                <span class="text-pink-500 text-xl">💡</span>
+                                <span class="text-sm font-medium">Problem Solving</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 bg-pink-50 rounded-2xl px-4 py-3">
+                                <span class="text-pink-500 text-xl">♧</span>
+                                <span class="text-sm font-medium">Teamwork</span>
+                            </div>
+
+                        </div>
+
+                        <a href="about.html"
+                           class="inline-flex items-center gap-2 text-pink-500 font-semibold mt-7 hover:gap-4 transition-all">
+                            Selengkapnya tentang saya
+                            <span>→</span>
+                        </a>
+                    </div>
+
+                    <div class="relative">
+
+                        <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-[2rem] p-7 sm:p-9 border border-pink-100">
+
+                            <div class="flex items-center gap-3 mb-7">
+                                <div class="w-12 h-12 rounded-2xl bg-pink-500 text-white flex items-center justify-center text-xl">
+                                    
+                                </div>
+
+                                <div>
+                                    <h3 class="font-bold text-lg">
+                                        Informasi Singkat
+                                    </h3>
+
+                                    <p class="text-sm text-slate-500">
+                                        Tentang Kia
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-5">
+
+                                <div>
+                                    <p class="text-xs text-pink-500 font-semibold uppercase tracking-wide">
+                                        Nama
+                                    </p>
+                                    <p class="font-medium mt-1">
+                                        Putu Kiara Dina Wardani
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p class="text-xs text-pink-500 font-semibold uppercase tracking-wide">
+                                        Program Studi
+                                    </p>
+                                    <p class="font-medium mt-1">
+                                        S1 Ilmu Komputer
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p class="text-xs text-pink-500 font-semibold uppercase tracking-wide">
+                                        Universitas
+                                    </p>
+                                    <p class="font-medium mt-1">
+                                        Universitas Pendidikan Ganesha
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <p class="text-xs text-pink-500 font-semibold uppercase tracking-wide">
+                                        Domisili
+                                    </p>
+                                    <p class="font-medium mt-1">
+                                        Bali, Indonesia
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="hidden sm:block absolute -right-5 -bottom-5 w-28 h-28 rounded-full bg-pink-100 -z-10"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-pink-50">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+                <div class="text-center max-w-2xl mx-auto">
+                    <p class="text-pink-500 font-semibold text-sm tracking-widest uppercase">
+                        Eksplorasi Portfolio
+                    </p>
+
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-800 mt-3">
+                        Belajar, Berkarya, dan Berkembang 
+                    </h2>
+
+                    <p class="text-slate-500 mt-4 leading-relaxed">
+                        Kenali lebih jauh perjalanan, project, pengalaman,
+                        dan kemampuan yang saya kembangkan selama menjadi mahasiswa.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+
+                    <a href="projects.html"
+                       class="group bg-white rounded-3xl p-7 border border-pink-100 hover:-translate-y-2 hover:shadow-xl hover:shadow-pink-100 transition duration-300">
+
+                        <div class="w-14 h-14 rounded-2xl bg-pink-100 flex items-center justify-center text-2xl mb-5">
+                            💻
+                        </div>
+
+                        <h3 class="text-xl font-bold group-hover:text-pink-500 transition">
+                            Portofolio
+                        </h3>
+
+                        <p class="text-slate-500 text-sm leading-relaxed mt-3">
+                            Lihat berbagai project dan karya yang saya kerjakan
+                            selama proses perkuliahan.
+                        </p>
+
+                        <p class="text-pink-500 font-semibold text-sm mt-5">
+                            Lihat project →
+                        </p>
+                    </a>
+
+                    <a href="experience.html"
+                       class="group bg-white rounded-3xl p-7 border border-pink-100 hover:-translate-y-2 hover:shadow-xl hover:shadow-pink-100 transition duration-300">
+
+                        <div class="w-14 h-14 rounded-2xl bg-pink-100 flex items-center justify-center text-2xl mb-5">
+                            ✨
+                        </div>
+
+                        <h3 class="text-xl font-bold group-hover:text-pink-500 transition">
+                            Pengalaman
+                        </h3>
+
+                        <p class="text-slate-500 text-sm leading-relaxed mt-3">
+                            Perjalanan organisasi, kepanitiaan, komunikasi,
+                            dan pengalaman lainnya.
+                        </p>
+
+                        <p class="text-pink-500 font-semibold text-sm mt-5">
+                            Lihat pengalaman →
+                        </p>
+                    </a>
+
+                    <a href="javascript.html"
+                       class="group bg-white rounded-3xl p-7 border border-pink-100 hover:-translate-y-2 hover:shadow-xl hover:shadow-pink-100 transition duration-300">
+
+                        <div class="w-14 h-14 rounded-2xl bg-pink-100 flex items-center justify-center text-2xl mb-5">
+                            📊
+                        </div>
+
+                        <h3 class="text-xl font-bold group-hover:text-pink-500 transition">
+                            Cek Nilai Mahasiswa
+                        </h3>
+
+                        <p class="text-slate-500 text-sm leading-relaxed mt-3">
+                            Hitung nilai akhir berdasarkan nilai Tugas,
+                            UTS, dan UAS secara praktis.
+                        </p>
+
+                        <p class="text-pink-500 font-semibold text-sm mt-5">
+                            Cek nilai →
+                        </p>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 py-8">
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+
+                <div>
+                    <p class="font-display text-2xl italic font-bold">
+                        Kia<span class="text-pink-400"></span>
+                    </p>
+
+                    <p class="text-slate-400 text-sm mt-1">
+                        Portfolio Mahasiswa Ilmu Komputer
+                    </p>
+                </div>
+
+                <p class="text-slate-500 text-sm">
+                    © 2026 Putu Kiara Dina Wardani
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById("menuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuButton.addEventListener("click", function () {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+</html>

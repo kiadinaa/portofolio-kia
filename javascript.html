@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cek Nilai Mahasiswa | Kia ♡</title>
+
+    <meta
+        name="description"
+        content="Cek nilai akhir mahasiswa berdasarkan bobot penilaian proses dan produk."
+    >
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+
+<body class="bg-pink-50 text-gray-800">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-pink-100">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <div class="flex items-center justify-between h-20">
+
+                <a href="index.html" class="text-2xl font-display font-semibold text-gray-900">
+                    Kia<span class="text-pink-500">♡</span>
+                </a>
+
+                <div class="hidden md:flex items-center gap-7 text-sm font-medium">
+
+                    <a href="index.html" class="hover:text-pink-500 transition">
+                        Beranda
+                    </a>
+
+                    <a href="about.html" class="hover:text-pink-500 transition">
+                        Tentang Saya
+                    </a>
+
+                    <a href="projects.html" class="hover:text-pink-500 transition">
+                        Portofolio
+                    </a>
+
+                    <a href="experience.html" class="hover:text-pink-500 transition">
+                        Pengalaman
+                    </a>
+
+                    <a href="javascript.html" class="text-pink-500">
+                        Cek Nilai Mahasiswa
+                    </a>
+
+                    <a href="contact.html" class="hover:text-pink-500 transition">
+                        Kontak
+                    </a>
+
+                </div>
+
+                <button
+                    id="menuButton"
+                    class="md:hidden text-2xl text-gray-700"
+                    aria-label="Buka menu"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+            <div id="mobileMenu" class="hidden md:hidden pb-5">
+
+                <div class="flex flex-col gap-4 text-sm font-medium">
+
+                    <a href="index.html" class="hover:text-pink-500 transition">
+                        Beranda
+                    </a>
+
+                    <a href="about.html" class="hover:text-pink-500 transition">
+                        Tentang Saya
+                    </a>
+
+                    <a href="projects.html" class="hover:text-pink-500 transition">
+                        Portofolio
+                    </a>
+
+                    <a href="experience.html" class="hover:text-pink-500 transition">
+                        Pengalaman
+                    </a>
+
+                    <a href="javascript.html" class="text-pink-500">
+                        Cek Nilai Mahasiswa
+                    </a>
+
+                    <a href="contact.html" class="hover:text-pink-500 transition">
+                        Kontak
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20">
+
+        <section class="max-w-6xl mx-auto px-6">
+
+            <div class="text-center max-w-3xl mx-auto mb-12">
+
+                <p class="text-pink-500 font-semibold text-sm uppercase tracking-widest mb-3">
+                    JavaScript Project
+                </p>
+
+                <h1 class="font-display text-4xl md:text-5xl font-semibold text-gray-900 mb-5">
+                    Cek Nilai Mahasiswa <span class="text-pink-500">♡</span>
+                </h1>
+
+                <p class="text-gray-600 leading-relaxed">
+                    Hitung estimasi nilai akhir berdasarkan komponen penilaian
+                    proses dan produk.
+                </p>
+
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-8">
+
+                <div class="lg:col-span-3 bg-white rounded-3xl shadow-xl border border-pink-100 p-8 md:p-10">
+
+                    <div class="mb-8">
+
+                        <h2 class="font-display text-2xl font-semibold text-gray-900 mb-2">
+                            Input Nilai
+                        </h2>
+
+                        <p class="text-gray-500 text-sm">
+                            Masukkan nilai sesuai dengan komponen penilaian.
+                        </p>
+
+                    </div>
+
+                    <form id="nilaiForm" class="space-y-5">
+
+                        <div>
+
+                            <label
+                                for="nama"
+                                class="block text-sm font-semibold text-gray-700 mb-2"
+                            >
+                                Nama Mahasiswa
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nama"
+                                required
+                                placeholder="Masukkan nama mahasiswa"
+                                class="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent transition"
+                            >
+
+                        </div>
+
+                        <div>
+
+                            <label
+                                for="tugas"
+                                class="block text-sm font-semibold text-gray-700 mb-2"
+                            >
+                                Tugas
+                                <span class="text-pink-500">(40%)</span>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="tugas"
+                                min="0"
+                                max="100"
+                                required
+                                placeholder="0 - 100"
+                                class="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent transition"
+                            >
+
+                            <p class="text-xs text-gray-400 mt-2">
+                                Tugas individu, kelompok, kuis, atau project-based learning.
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <label
+                                for="sikap"
+                                class="block text-sm font-semibold text-gray-700 mb-2"
+                            >
+                                Sikap, Keaktifan, & Kehadiran
+                                <span class="text-pink-500">(20%)</span>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="sikap"
+                                min="0"
+                                max="100"
+                                required
+                                placeholder="0 - 100"
+                                class="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent transition"
+                            >
+
+                            <p class="text-xs text-gray-400 mt-2">
+                                Nilai gabungan sikap, keaktifan, dan kehadiran selama perkuliahan.
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <label
+                                for="kehadiran"
+                                class="block text-sm font-semibold text-gray-700 mb-2"
+                            >
+                                Persentase Kehadiran
+                                <span class="text-pink-500">(Syarat UAS)</span>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="kehadiran"
+                                min="0"
+                                max="100"
+                                required
+                                placeholder="Contoh: 90"
+                                class="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent transition"
+                            >
+
+                            <p class="text-xs text-gray-400 mt-2">
+                                Minimal kehadiran 75% agar nilai UAS dapat keluar atau diinput.
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <label
+                                for="uts"
+                                class="block text-sm font-semibold text-gray-700 mb-2"
+                            >
+                                UTS
+                                <span class="text-pink-500">(15%)</span>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="uts"
+                                min="0"
+                                max="100"
+                                required
+                                placeholder="0 - 100"
+                                class="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent transition"
+                            >
+
+                        </div>
+
+                        <div>
+
+                            <label
+                                for="uas"
+                                class="block text-sm font-semibold text-gray-700 mb-2"
+                            >
+                                UAS
+                                <span class="text-pink-500">(25%)</span>
+                            </label>
+
+                            <input
+                                type="number"
+                                id="uas"
+                                min="0"
+                                max="100"
+                                required
+                                placeholder="0 - 100"
+                                class="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-pink-300 focus:border-transparent transition"
+                            >
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="w-full py-4 rounded-xl bg-pink-500 text-white font-semibold hover:bg-pink-600 transition duration-300 shadow-lg shadow-pink-200"
+                        >
+                            Hitung Nilai ♡
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <div class="lg:col-span-2 space-y-8">
+
+                    <div
+                        id="hasil"
+                        class="bg-gray-900 rounded-3xl p-8 md:p-10 text-white shadow-xl"
+                    >
+
+                        <p class="text-pink-300 font-medium mb-3">
+                            Hasil Penilaian
+                        </p>
+
+                        <h2
+                            id="hasilNama"
+                            class="font-display text-3xl font-semibold mb-8"
+                        >
+                            Belum Ada Data
+                        </h2>
+
+                        <div class="text-center py-5">
+
+                            <p class="text-sm text-gray-400 mb-2">
+                                Nilai Akhir
+                            </p>
+
+                            <p
+                                id="nilaiAkhir"
+                                class="font-display text-6xl font-semibold text-pink-300"
+                            >
+                                —
+                            </p>
+
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mt-6">
+
+                            <div class="bg-white/10 rounded-2xl p-4 text-center">
+                                <p class="text-xs text-gray-400 mb-1">
+                                    Nilai Huruf
+                                </p>
+
+                                <p
+                                    id="nilaiHuruf"
+                                    class="text-2xl font-bold"
+                                >
+                                    —
+                                </p>
+                            </div>
+
+                            <div class="bg-white/10 rounded-2xl p-4 text-center">
+                                <p class="text-xs text-gray-400 mb-1">
+                                    Status
+                                </p>
+
+                                <p
+                                    id="status"
+                                    class="text-lg font-bold"
+                                >
+                                    —
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div
+                            id="pesanKehadiran"
+                            class="hidden mt-6 rounded-2xl bg-red-400/10 border border-red-300/20 p-4"
+                        >
+                            <p class="text-sm text-red-200 leading-relaxed">
+                                Kehadiran belum memenuhi batas minimal 75%.
+                                Nilai UAS belum dapat digunakan berdasarkan
+                                ketentuan yang diterapkan pada sistem ini.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-7 shadow-lg border border-pink-100">
+
+                        <h3 class="font-display text-xl font-semibold text-gray-900 mb-5">
+                            Bobot Penilaian
+                        </h3>
+
+                        <div class="space-y-4">
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">
+                                    Tugas
+                                </span>
+
+                                <span class="font-semibold text-pink-500">
+                                    40%
+                                </span>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">
+                                    Sikap, Keaktifan, & Kehadiran
+                                </span>
+
+                                <span class="font-semibold text-pink-500">
+                                    20%
+                                </span>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">
+                                    UTS
+                                </span>
+
+                                <span class="font-semibold text-pink-500">
+                                    15%
+                                </span>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-600">
+                                    UAS
+                                </span>
+
+                                <span class="font-semibold text-pink-500">
+                                    25%
+                                </span>
+                            </div>
+
+                            <div class="border-t border-gray-100 pt-4 flex items-center justify-between">
+                                <span class="font-semibold text-gray-900">
+                                    Total
+                                </span>
+
+                                <span class="font-bold text-gray-900">
+                                    100%
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mt-8 bg-pink-100/70 border border-pink-200 rounded-3xl p-6 md:p-8">
+
+                <h3 class="font-display text-xl font-semibold text-gray-900 mb-3">
+                    Catatan Penilaian
+                </h3>
+
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    Penilaian proses terdiri dari Tugas sebesar 40% serta
+                    Sikap, Keaktifan, & Kehadiran sebesar 20%. Penilaian produk
+                    terdiri dari UTS sebesar 15% dan UAS sebesar 25%.
+                    Berdasarkan pedoman yang digunakan pada sistem ini,
+                    mahasiswa wajib memenuhi minimal 75% kehadiran agar nilai
+                    UAS dapat keluar atau diinput.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-pink-100">
+
+        <div class="max-w-6xl mx-auto px-6 py-8">
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+
+                <p class="text-sm text-gray-500">
+                    © 2026 Kia. Built with ♡ and Tailwind CSS.
+                </p>
+
+                <p class="text-sm text-gray-400">
+                    JavaScript Project
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
